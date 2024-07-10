@@ -1,17 +1,12 @@
 ---
-theme: ./
+theme: ../../slidev-theme-behackl-kfu
 author: Benjamin Hackl
 ---
 
-# A Somewhat Long Title for a Math Talk or Lecture
+# A Somewhat _Long Title_ for a **Math Talk** or Lecture
 
-Presentation slides for developers
+#### Benjamin Hackl
 
-<div class="pt-12">
-  <span @click="next" class="px-2 p-1 rounded cursor-pointer hover:bg-white hover:bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
 
 ---
 
@@ -53,7 +48,7 @@ Hover on the bottom-left corner to see the navigation's controls panel
 
 ---
 layout: image-right
-image: https://cover.sli.dev
+image: public/test.jpg
 ---
 
 # Code
@@ -83,3 +78,6 @@ class: "text-center"
 # Learn More
 
 [Documentation](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+
+
+
