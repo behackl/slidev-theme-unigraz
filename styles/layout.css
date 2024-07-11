@@ -48,13 +48,16 @@
     font-weight: 600;
   }
 
-  h1 strong {
-    background-color: transparent;
-    text-decoration-line: underline;
-    text-decoration-color: var(--slidev-theme-primary);
-    text-decoration-thickness: 15px;
-    text-underline-offset: -10px;
-    text-decoration-skip-ink: none;
+  h1,h2,h3,h4,h5 {
+    em strong {
+      font-style: normal;
+      background-color: transparent;
+      text-decoration-line: underline;
+      text-decoration-color: var(--slidev-theme-primary);
+      text-decoration-thickness: 0.4em;
+      text-underline-offset: -0.15em;
+      text-decoration-skip-ink: none;
+    }
   }
 }
 
@@ -97,6 +100,16 @@
 }
 
 /* custom styling rules */
+
+pre.shiki {
+  background-color: var(--shiki-light-bg);
+}
+html.dark pre.shiki {
+  background-color: var(--shiki-dark-bg);
+}
+.slidev-code-wrapper button {
+  color: white;
+}
 
 header, footer {
   font-size: 12px;

@@ -1,32 +1,49 @@
 ---
 theme: ../../slidev-theme-behackl-kfu
 author: Benjamin Hackl
+presenterName: Benjamin Hackl
+affiliation: Department of Mathematics and Scientific Computing / University of Graz
 ---
 
-# A __Somewhat Long Title__ for a *Math Talk* or *Lecture*
+# A _**Somewhat Long Title**_ for a Math Talk or Lecture
 
-#### Benjamin Hackl
+### Some Subtitle, Maybe Software | _**Conference @ Place, Country**_
+
+<template #extra>
+
+Joint work with [Some Colleague](#) and [Other Colleague](#)
+
+</template>
 
 
 ---
 
-# Powered by __Slidev__
+# Powered by _**Slidev**_
 
-Slidev is a slide maker and <span v-mark.red>presentation tool</span> designed for developers. It includes the following features:
+Slidev is a slide maker and <span v-mark.red>presentation tool</span> designed for developers. 
 
-<v-clicks>
+To start a new presentation, simply start a new file `slides.md`
+with a bit of content like
 
-- **Text-based** - focus on your content with Markdown, then style it later
-- **Themable** - themes can be shared and reused as npm packages
-- **Developer Friendly** - code highlighting, live coding with autocompletion
-- **Interactive** - embed Vue components to enhance your expressions
+```md
+---
+theme: path/to/slidev-theme-behackl-kfu
+presenterName: Benjamin Hackl
+affiliation: Department of Mathematics and Scientific Computing / University of Graz
+---
 
-</v-clicks>
+# Fancy Main Title
 
-<br>
-<br>
+### With Some Subtitle
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+```
+
+Then startup the preview server using
+
+```bash
+$ slidev
+```
+
 
 ---
 
@@ -117,13 +134,34 @@ def fibonacci(n):
 ```
 
 ---
-layout: center
+layout: two-cols-header
+---
+
+This spans both columns, might only be evident if used
+with a sufficiently long text?
+
+::left::
+
+This is a list in the left column.
+
+- First item
+- Second item
+- Third item
+- And final item
+
+::right::
+
+And this is right column. We could put a little
+decoration element here?
+
+<decor class="bottom-10 right-50"><mdi-flower/></decor>
+
+---
+layout: end
 class: "text-center"
 ---
 
-# Learn More
-
-[Documentation](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+# Thank you!
 
 
 
