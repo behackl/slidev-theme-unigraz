@@ -1,7 +1,61 @@
 :root {
   /* default theme color */
   /* can be overrided by uses `themeConfig` option */
-  --slidev-theme-primary: #ffd400;
+  --slidev-theme-primary: #ffd500;
+  --slidev-theme-supplement: #fff7c8;
+
+}
+
+/* noto-sans-regular - greek_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/noto-sans-v28-greek_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-italic - greek_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('fonts/noto-sans-v28-greek_latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-600 - greek_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/noto-sans-v28-greek_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-600italic - greek_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: url('fonts/noto-sans-v28-greek_latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+.slidev-layout {
+  font-family: 'Noto Sans', sans-serif;
+  padding-top: 2.5rem;
+  margin-left: 0.5rem;
+  font-size: 20px;
+  h1, h2, h3, h4 {
+    font-weight: 600;
+  }
+
+  h1 strong {
+    background-color: transparent;
+    text-decoration-line: underline;
+    text-decoration-color: var(--slidev-theme-primary);
+    text-decoration-thickness: 15px;
+    text-underline-offset: -10px;
+    text-decoration-skip-ink: none;
+  }
 }
 
 .slidev-layout.cover,
@@ -23,14 +77,30 @@
   }
 }
 
-.slidev-layout {
-  padding-top: 3rem;
-  h1, h2, h3, h4 {
-    font-weight: 600;
-  }
+.slidev-layout ul {
+  margin: 0.25em 0;
+  padding: 0 1em;
+  list-style: none;
+}
+
+.slidev-layout ul > li::before {
+  content: "";
+  border-color: transparent var(--slidev-theme-primary);
+  border-style: solid;
+  border-width: 0.27em 0 0.27em 0.5em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 22px;
+  position: relative;
 }
 
 /* custom styling rules */
+
+header, footer {
+  font-size: 12px;
+}
 
 .slidev-vclick-target {
   transition: opacity 200ms ease;
@@ -39,4 +109,45 @@
 .slidev-vclick-hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.slidev-layout .block {
+  position: relative;
+  border: 5px solid var(--slidev-theme-primary);
+  border-radius: 10px;
+  background-color:#f5f5f5;
+  padding: 0.75em 1em 0.25em 1em;
+  text-align: left;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+  padding-top: 1em;
+}
+
+.slidev-layout .block .block-title {
+  position: absolute;
+  top: -1.3em;
+  left: 10px;
+  border-radius: 10px;
+  background-color: var(--slidev-theme-supplement);
+  border: 5px solid var(--slidev-theme-primary);
+  font-weight: 600;
+  padding: 2px 5px;
+}
+
+.dark .slidev-layout .block {
+  background-color: #222;
+
+  .block-title {
+    background-color: #331;
+  
+  }
+}
+
+.decor {
+  position: absolute;
+  z-index: -100;
+  padding: 15px;
+  background-color: var(--slidev-theme-primary);
+  color: var(--slidev-theme-supplement);
+  border-radius: 30%;
 }
