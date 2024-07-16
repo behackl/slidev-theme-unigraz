@@ -18,6 +18,13 @@ const props = defineProps({
       <div class="mt-8" style="font-size: 15px;">
         <slot name="extra">{{ extra }}</slot>
       </div>
+      <circle-unigraz
+        ring-color="#"
+        width="450"
+        class="absolute right-0 bottom--20%"
+        viewBox="0 0 50 50" 
+        style="z-index: -1;"
+      />
     </div>
   </div>
 </template>
