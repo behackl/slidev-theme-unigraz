@@ -2,16 +2,16 @@
 theme: ../../slidev-theme-behackl-kfu
 author: Benjamin Hackl
 presenterName: Benjamin Hackl
-affiliation: Department of Mathematics and Scientific Computing / University of Graz
+affiliation: Department of Mathematics and Scientific Computing @ University of Graz
 ---
 
 # A _**Somewhat Long Title**_ for a Math Talk or Lecture
 
-### Some Subtitle, Maybe Software | _**Conference @ Place, Country**_
+### Some Subtitle, Maybe Software | _**Conference**_ @ Place, Country
 
 <template #extra>
 
-Joint work with [Some Colleague](#) and [Other Colleague](#)
+Extra content: Joint work with [Some Colleague](#) and [Other Colleague](#)
 
 </template>
 
@@ -20,12 +20,19 @@ Joint work with [Some Colleague](#) and [Other Colleague](#)
 
 # Powered by _**Slidev**_
 
-Slidev is a slide maker and <span v-mark.red>presentation tool</span> designed for developers. 
+Slidev is a slide maker and <span v-mark.yellow>presentation tool</span> designed for developers.
+
+This theme, leaning on the CD of the University of Graz, has been created by [Benjamin Hackl](https://benjamin-hackl.at).
+
+<p v-click>
 
 To start a new presentation, simply start a new file `slides.md`
 with a bit of content like
 
-```md
+</p>
+<div v-click="3">
+
+```md {none|1-5|all}{lines: true, at: '+1'}
 ---
 theme: path/to/slidev-theme-behackl-kfu
 presenterName: Benjamin Hackl
@@ -38,16 +45,35 @@ affiliation: Department of Mathematics and Scientific Computing / University of 
 
 ```
 
+</div>
+<div v-click>
+
 Then startup the preview server using
 
 ```bash
-$ slidev
+$ npx slidev
 ```
 
+</div>
 
 ---
 
-# ... to an Inequality ...
+# Navigation
+
+Hover on the bottom-left corner to see the navigation's controls panel
+
+## Keyboard Shortcuts
+
+|     |     |
+| --- | --- |
+| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide |
+| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
+| <kbd>up</kbd> | previous slide |
+| <kbd>down</kbd> | next slide |
+
+---
+
+# An Inequality ...
 
 - Bóna--DeJonge-question $\iff a_n / C_n > a_{n+1} / C_{n+1}$ for $n\geq 3$
 - After some further manipulations, this is equivalent to...
@@ -79,41 +105,57 @@ for $n \geq 5$.
 <mdi-compass />
 </decor>
 
-<block title="Theorem (H.&ndash;Wagner, 2024)">
+<block v-click title="Theorem (H.&ndash;Wagner, 2024)">
 
 For $n \to \infty$, we have
 $$ F(n) = \binom{2n}{n} \Big( -\frac{n^2}{8} + \frac{n}{24} + o(n) \Big) $$
 
 </block>
+<div v-click>
 
 - **Not good enough!** No information about error -- can only
   say sequence is _eventually decreasing_...
 
+</div>
+
 ---
 
-# __Act II__ -- `dependent_bterms` in SageMath
+# *__Act II__* -- `dependent_bterms` in SageMath
+
+<v-clicks depth="2">
 
 - **$B$-terms:** $O$-terms with explicit constant + validity point,
-  e.g., $B_{n\geq 100}(42 n^3)$ 
+  e.g., $B_{n\geq 100}(42 n^3)$
+
 - Package extends SageMath; assume $n\to\infty$:
-  - Monomially bounded variable $n^\alpha \leq k \leq n^\beta$
+
+  - Support for additional monomially bounded variable $n^\alpha \leq k \leq n^\beta$
+
   - Taylor expansions with (and at) $B$-terms
 
 
----
+</v-clicks>
 
-# Navigation
+<div class="grid grid-cols-[2fr_1fr] gap-4">
+<div>
+<v-clicks at="5">
 
-Hover on the bottom-left corner to see the navigation's controls panel
+- Installation:
+  ```sh
+  $ sage -pip install dependent_bterms
+  ```
 
-## Keyboard Shortcuts
+- Try it! Interactive demo at [behackl.dev/asy/dbt](https://behackl.dev/asy/dbt), or
+  view [static version](https://github.com/behackl/dependent_bterms/blob/main/toolbox_demo.ipynb)
+  on GitHub
 
-|     |     |
-| --- | --- |
-| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+</v-clicks>
+</div>
+<div>
+<decor v-click="5" class="bottom-30 right-30"><mdi-laptop/></decor>
+</div>
+</div>
+
 
 ---
 layout: image-right
