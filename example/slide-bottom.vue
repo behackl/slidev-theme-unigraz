@@ -1,10 +1,7 @@
 <!-- hide the footer from "cover" layout -->
 <template>
-  <header
-    v-if="$nav.currentLayout !== 'cover'"
-    class="absolute top-0 right-4 p-2 opacity-50"
-  >
-    <em>Benjamin Hackl</em>
+  <header class="absolute top-0 right-4 p-2">
+    <logo-unigraz width="80"/>
   </header>
   <header
     v-if="$nav.currentLayout !== 'cover'"
@@ -12,8 +9,11 @@
   >
     Uni Graz-styled template slides, short title
   </header>
-  <footer class="absolute bottom-0 left-4 p-2">
-    <logo-unigraz width="60"/>
+  <footer
+    v-if="$nav.currentLayout !== 'cover'"
+    class="absolute bottom-0 left-4 p-2 opacity-50"
+  >
+    <em>Benjamin Hackl</em>
   </footer>
   <footer 
     v-if="$nav.currentLayout !== 'cover'"
