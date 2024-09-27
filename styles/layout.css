@@ -1,6 +1,5 @@
 :root {
   /* default theme color */
-  /* can be overrided by uses `themeConfig` option */
   --slidev-theme-primary: #ffd500;
   --slidev-theme-supplement: #fff7c8;
 
@@ -134,4 +133,55 @@ header, footer {
   background-color: var(--slidev-theme-primary);
   color: var(--slidev-theme-supplement);
   border-radius: 30%;
+}
+
+.admonition-warning {
+  --admonition-primary: rgb(255, 145, 0);
+  --admonition-secondary: rgba(255, 145, 0, 0.2);
+}
+
+.admonition-danger {
+  --admonition-primary: rgb(255, 82, 82);
+  --admonition-secondary: rgba(255, 82, 82, 0.2);
+}
+
+.admonition-info {
+  --admonition-primary: rgb(0, 176, 255);
+  --admonition-secondary: rgba(0, 176, 255, 0.2);
+}
+
+.admonition-kfu {
+  --admonition-primary: #ffd500;
+  --admonition-secondary: rgba(255, 213, 0, 0.2);
+}
+
+.admonition-base {
+  --admonition-primary: rgb(101, 31, 255);
+  --admonition-secondary: rgba(101, 31, 255, 0.2);
+}
+
+
+.admonition {
+  border-left: 8px solid var(--admonition-primary);
+  box-shadow: 0 .2rem .5rem rgba(0,0,0,.05),0 0 .0625rem rgba(0,0,0,.1);
+  margin-bottom: 0.75rem;
+
+  .admonition-body {
+    padding: 5px 10px;
+    background-color: var(--admonition-bg-body);
+  }
+
+  .admonition-title {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px 0 10px;
+    font-weight: 600;
+    background-color: var(--admonition-secondary);
+
+    .admonition-icon {
+      margin-right: 8px;
+      color: var(--admonition-primary);
+    }
+  }
+
 }

@@ -3,6 +3,7 @@ theme: ../../slidev-theme-behackl-kfu
 author: Benjamin Hackl
 presenterName: Benjamin Hackl
 affiliation: Department of Mathematics and Scientific Computing @ University of Graz
+mdc: true
 ---
 
 # A _**Somewhat Long Title**_ for a Math Talk or Lecture
@@ -70,6 +71,31 @@ Hover on the bottom-left corner to see the navigation's controls panel
 | <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
 | <kbd>up</kbd> | previous slide |
 | <kbd>down</kbd> | next slide |
+
+
+---
+
+# Admonitions!
+
+::admonition{kind="warning" title="Warning" icon="mdi:warning"}
+here is something important!
+::
+
+::admonition{kind="danger" title="Very dangerous!" icon="mdi:skull"}
+here is something dangerous!
+::
+
+::admonition{kind="info" title="Interesting ..." icon="mdi:info"}
+here is something interesting!
+::
+
+::admonition{title="Uni Graz branding!" kind="kfu"}
+Here is something KFU related!
+::
+
+::admonition{title="Defaults?"}
+Let us also try and get some default values up and running?
+::
 
 ---
 
