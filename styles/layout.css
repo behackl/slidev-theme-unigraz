@@ -185,3 +185,8 @@ header, footer {
   }
 
 }
+
+img.withcaption + em {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
