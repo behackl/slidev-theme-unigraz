@@ -2,7 +2,8 @@
   /* default theme color */
   --slidev-theme-primary: #ffd500;
   --slidev-theme-supplement: #fff7c8;
-
+  --slidev-code-font-size: 1.125rem;
+  --slidev-code-line-height: 1.75rem;
 }
 
 .slidev-layout {
@@ -77,8 +78,10 @@ pre.shiki {
 html.dark pre.shiki {
   background-color: var(--shiki-dark-bg);
 }
-.slidev-code-wrapper button {
-  color: white;
+.slidev-code-wrapper {
+  button {
+    color: white;
+  }
 }
 
 header, footer {
