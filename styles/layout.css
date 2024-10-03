@@ -189,7 +189,8 @@ header, footer {
 
 }
 
-img.withcaption + em {
+img.withcaption + em, div.slidev-code-wrapper + em {
   font-size: 0.75rem;
   opacity: 0.5;
 }
+
