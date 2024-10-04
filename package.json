@@ -33,7 +33,7 @@
       "transition": "slide-left",
       "fonts": {
         "sans": "Nunito Sans",
-        "mono": "Fira Code"
+        "mono": "Fira Mono"
       }
     }
   }
