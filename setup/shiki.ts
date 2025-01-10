@@ -1,7 +1,6 @@
-import type { ShikiSetupReturn } from '@slidev/types'
 import { defineShikiSetup } from '@slidev/types'
 
-export default defineShikiSetup((): ShikiSetupReturn => {
+export default defineShikiSetup(() => {
   return {
     themes: {
       dark: 'material-theme-ocean',
