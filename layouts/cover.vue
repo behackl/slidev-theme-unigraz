@@ -3,6 +3,12 @@ const props = defineProps({
   presenterName: { type: String },
   affiliation: { type: String },
   extra: { type: String },
+  coverMedia: { type: String, default: '' },
+  coverMediaType: { type: String, default: '' },
+  coverMediaAlt: { type: String, default: '' },
+  coverMediaOpacity: { type: [String, Number], default: 1 },
+  coverMediaPosition: { type: String, default: 'center' },
+  coverMediaClipRadius: { type: String, default: '81%' },
 })
 </script>
 
@@ -18,12 +24,13 @@ const props = defineProps({
       <div class="mt-8" style="font-size: 15px;">
         <slot name="extra">{{ extra }}</slot>
       </div>
-      <circle-unigraz
-        ring-color="#"
-        width="450"
-        class="absolute right-0 bottom--20%"
-        viewBox="0 0 50 50" 
-        style="z-index: -1;"
+      <cover-circle-media
+        :src="coverMedia"
+        :type="coverMediaType"
+        :alt="coverMediaAlt"
+        :opacity="coverMediaOpacity"
+        :object-position="coverMediaPosition"
+        :clip-radius="coverMediaClipRadius"
       />
     </div>
   </div>

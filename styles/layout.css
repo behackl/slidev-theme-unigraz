@@ -107,6 +107,12 @@ header, footer {
   pointer-events: none;
 }
 
+/* KaTeX line highlighting: hide non-active equation rows completely visually.
+   Keep layout space, so aligned equations don't jump between clicks. */
+.slidev-katex-wrapper .mord.dishonored {
+  opacity: 0;
+}
+
 .slidev-layout .block {
   position: relative;
   border: 5px solid var(--slidev-theme-primary);
