@@ -25,12 +25,12 @@ Slidev is a slide maker and <span v-mark.yellow>presentation tool</span> designe
 
 This theme, leaning on the CD of the University of Graz, has been created by [Benjamin Hackl](https://benjamin-hackl.at).
 
-<p v-click>
+<div v-click>
 
 To start a new presentation, simply start a new file `slides.md`
 with a bit of content like
 
-</p>
+</div>
 <div v-click="3">
 
 ```md {none|1-5|all}{lines: true, at: '+1'}
