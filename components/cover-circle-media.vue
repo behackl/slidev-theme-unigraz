@@ -41,12 +41,14 @@ const isVideo = computed(() => {
     style="z-index: -1;"
   >
     <div
-      v-if="src"
+      v-if="src || $slots.default"
       class="absolute inset-0 overflow-hidden"
       :style="{ zIndex: 0, clipPath: `circle(${clipRadius} at 100% 100%)` }"
     >
+      <!-- custom content (e.g. a live component) instead of an image/video -->
+      <slot v-if="$slots.default" />
       <video
-        v-if="isVideo"
+        v-else-if="isVideo"
         autoplay
         loop
         muted

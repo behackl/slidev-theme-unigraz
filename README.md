@@ -92,6 +92,16 @@ coverMediaOpacity: 0.9
 
 The component detects common video extensions automatically (`.mp4`, `.webm`, `.ogg`, `.mov`), or you can set `coverMediaType: video` explicitly.
 
+Instead of an image or video, the circle can also show arbitrary content (e.g. a live
+animation component) via the `circle` slot of the `cover` layout. The content fills the
+450×450 box in the bottom right corner; only the quarter disc inside the ring is visible.
+
+```md
+<template #circle>
+  <MyAnimation />
+</template>
+```
+
 ### Branding components
 
 The theme includes SVG-based branding helpers:

@@ -31,7 +31,11 @@ const props = defineProps({
         :opacity="coverMediaOpacity"
         :object-position="coverMediaPosition"
         :clip-radius="coverMediaClipRadius"
-      />
+      >
+        <template v-if="$slots.circle" #default>
+          <slot name="circle" />
+        </template>
+      </cover-circle-media>
     </div>
   </div>
 </template>
