@@ -1,6 +1,6 @@
 {
   "name": "@behackl/slidev-theme-unigraz",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Slidev theme in the style of the University of Graz, for talks and lectures with mathematical or technical content.",
   "type": "module",
   "author": "Benjamin Hackl <devel@benjamin-hackl.at>",
