@@ -1,5 +1,5 @@
 ---
-theme: ../../slidev-theme-behackl-kfu
+theme: ../
 author: Benjamin Hackl
 presenterName: Benjamin Hackl
 affiliation: Department of Mathematics and Scientific Computing @ University of Graz
@@ -35,7 +35,7 @@ with a bit of content like
 
 ```md {none|1-5|all}{lines: true, at: '+1'}
 ---
-theme: path/to/slidev-theme-behackl-kfu
+theme: '@behackl/slidev-theme-unigraz'
 presenterName: Benjamin Hackl
 affiliation: Department of Mathematics and Scientific Computing / University of Graz
 ---

@@ -1,4 +1,4 @@
-# slidev-theme-behackl-kfu
+# @behackl/slidev-theme-unigraz
 
 A [Slidev](https://github.com/slidevjs/slidev) theme with a University of Graz-inspired visual style, intended for talks and lectures with mathematical or technical content.
 
@@ -6,18 +6,22 @@ The theme provides custom layouts, a small set of reusable components, and defau
 
 ## Install
 
-Add the following frontmatter to your `slides.md`. Start Slidev and it will prompt you to install the theme automatically.
+```sh
+pnpm add @behackl/slidev-theme-unigraz
+```
 
-<pre><code>---
-theme: <b>behackl-kfu</b>
----</code></pre>
-
-If you use the theme directly from a local checkout, point `theme` to the repository path instead:
+and reference the theme in the frontmatter of your `slides.md` (quoted, since YAML values may not start with `@`):
 
 ```yaml
 ---
-theme: path/to/slidev-theme-behackl-kfu
+theme: '@behackl/slidev-theme-unigraz'
 ---
+```
+
+To work on the theme while using it in a talk, link a local checkout into the talk project:
+
+```sh
+pnpm link ~/code/slidev-theme-unigraz
 ```
 
 Learn more about [how to use a Slidev theme](https://sli.dev/themes/use).
@@ -112,8 +116,24 @@ The theme includes SVG-based branding helpers:
 
 ## Development
 
-- `npm install`
-- `npm run dev` to start the theme preview
+- `pnpm install`
+- `pnpm dev` to start the theme preview (`example/slides.md`)
 - edit `example/slides.md` and the theme files to see changes
-- `npm run export` to generate a preview PDF
-- `npm run screenshot` to generate preview PNGs
+- `pnpm export` to generate a preview PDF
+- `pnpm screenshot` to generate preview PNGs
+
+## Releasing
+
+Releases are published to npm from GitHub Actions (`.github/workflows/publish.yml`)
+whenever a `v*` tag is pushed:
+
+```sh
+pnpm version patch   # or minor / major; bumps package.json, commits, and tags
+git push --follow-tags
+```
+
+Use `pnpm pack` to check the package contents locally before releasing.
+
+## License
+
+MIT for the code. The University of Graz name and logo are trademarks of the University of Graz and are not covered by this license.

@@ -1,34 +1,53 @@
 {
-  "name": "slidev-theme-behackl-kfu",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@behackl/slidev-theme-unigraz",
+  "version": "0.1.0",
+  "description": "A Slidev theme in the style of the University of Graz, for talks and lectures with mathematical or technical content.",
   "type": "module",
+  "author": "Benjamin Hackl <devel@benjamin-hackl.at>",
+  "license": "MIT",
+  "homepage": "https://github.com/behackl/slidev-theme-unigraz#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behackl/slidev-theme-unigraz.git"
+  },
+  "bugs": "https://github.com/behackl/slidev-theme-unigraz/issues",
   "keywords": [
     "slidev-theme",
     "slidev"
   ],
+  "files": [
+    "components",
+    "layouts",
+    "setup",
+    "styles"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=18.0.0",
-    "slidev": ">=0.19.3"
+    "slidev": ">=52.0.0"
   },
   "scripts": {
-    "build": "slidev build example.md",
-    "dev": "slidev example.md --open",
-    "export": "slidev export example.md",
-    "screenshot": "slidev export example.md --format png"
+    "build": "slidev build example/slides.md",
+    "dev": "slidev example/slides.md --open",
+    "export": "slidev export example/slides.md",
+    "screenshot": "slidev export example/slides.md --format png"
+  },
+  "peerDependencies": {
+    "@slidev/cli": ">=52.0.0"
   },
   "dependencies": {
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/openmoji": "^1.2.27",
     "@iconify-json/twemoji": "^1.2.5",
-    "@iconify/vue": "^4.3.0",
-    "@slidev/types": "^52.18.0"
+    "@iconify/vue": "^4.3.0"
   },
   "devDependencies": {
     "@slidev/cli": "^52.18.0",
+    "@slidev/types": "^52.18.0",
     "prettier": "^3.9.5"
   },
-  "//": "Learn more: https://sli.dev/themes/write-a-theme.html",
   "slidev": {
     "colorSchema": "both",
     "highlighter": "all",
@@ -40,5 +59,6 @@
         "mono": "Fira Mono"
       }
     }
-  }
+  },
+  "packageManager": "pnpm@11.5.1"
 }
